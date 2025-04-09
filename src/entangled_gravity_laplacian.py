@@ -25,7 +25,7 @@ import csv
 # -----------------------------
 Lx, Ly, Lz = 32, 32, 32         # Lattice dimensions
 d = 2                           # Physical dimension: spin-1/2
-D = 2                           # Bond dimension (kept small for demonstration)
+D = 3                           # Bond dimension (kept small for demonstration)
 tau = 0.01                      # Imaginary time step
 num_steps = 5                   # Number of imaginary time evolution steps (for demo)
 J = 1.0                         # Coupling strength
