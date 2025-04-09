@@ -35,6 +35,7 @@ Both are *tested for coherence*, not used to prove or disprove.
 
 - **`doc/`**: Framing documents explaining the metaphysical foundation, links to existing literature, and known limitations.
 - **`src/`**: Core computational models exploring cosmological evolution under the holographic assumption.
+- **`data/`**: Various results of the core computational models.
 
 ## Why This Exists
 
