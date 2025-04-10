@@ -1,5 +1,5 @@
 """
-entangled_fitting.py
+sparc_fitting.py
 
 Script that scans the local folder for SPARC-like .dat files,
 prompts user to pick one,
@@ -7,7 +7,7 @@ fits the entanglement-based velocity model to the observed rotation curve,
 and saves a CSV + figure of the results, including residuals.
 
 Usage: 
-    python entangled_fitting.py
+    python sparc_fitting.py
 """
 
 import os

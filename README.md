@@ -1,54 +1,56 @@
 # The HoloCosmo Project
 
-## What This Is
+## Overview
 
-This repository contains an independent exploration of cosmological structure under a single working assumption:  
-the physical reality is a holographic projection of information encoded on a time-evolving, discrete boundary surface.
+The **HoloCosmo Project** is an independent scientific exploration aiming to understand cosmological phenomena through two foundational assumptions:
 
-This is not a conventional research project.  
-It is not a theory to be proven.  
-It is not a critique of existing models.  
-It is a structured exercise in *scientific curiosity*, guided by discipline, humility, and non-dogmatic reasoning.
-It is citizen science—for playing in other people's sandboxes, but not for stepping on anyone's toes.
+- Physical reality is a holographic projection of information encoded on a discrete, lower-dimensional surface that evolves over cosmic time.
+- Gravitation emerges naturally from quantum entanglement structures.
 
-## What This Is Not
+This project adopts a scientifically rigorous yet non-dogmatic stance. It neither explicitly endorses nor seeks to refute existing cosmological models. Instead, it explores whether these assumptions can yield internally consistent, computationally viable, and observationally testable interpretations of cosmological data.
 
-- Not an attempt to **refute** mainstream cosmology or quantum gravity.
-- Not a claim to **novel physical laws** or predictive superiority.
-- Not a joke, parody, or thoughtless contrarianism.
-- Not a platform for polemics or metaphysical evangelism.
+## Repository Structure
 
-## Posture of Inquiry
+The project repository is organized into several components:
 
-This project is based on a **single a priori assumption**:
+```
+holocosmo/ ├── doc/                    # Theoretical documents and PDFs
+           ├── src/                    # Python scripts and modules (for simulation & models)
+           ├── data/                   # Outputs from simulation runs
+           ├── notebooks/              # Jupyter Notebooks tying together the project
+           │   ├── Introduction.ipynb          # Overview, background, and project goals
+           │   ├── Holographic_Cosmology.ipynb # Notebooks on holography & dark energy
+           │   ├── Emergent_Gravity.ipynb      # Notebooks on entanglement and gravity
+           │   └── Analysis.ipynb              # Notebooks for simulation outputs and plots
+           ├── README.md               # Overview of the project
+           └── requirements.txt        # List of Python packages needed
+```
 
-> That reality, in its observed dimensionality, emerges from a discrete, lower-dimensional boundary via a holographic mapping—  
-> and that the resolution of this mapping evolves as the boundary expands.
+## How to Engage with This Project
 
-Everything in this repository is approached through that lens. The goal is not to make the data fit the model—but to explore whether **a coherent, data-respecting interpretation** of reality can emerge from this fixed metaphysical stance.
+- **Explore the notebooks**: Peek at our `/notebooks` that integrate theory, computation, and visualization to provide clear pathways through the project's logic and results.
+- **Examine the code**: Python scripts in `/src` implement the computational models central to this exploration.
+- **Review theoretical papers**: Found in `/doc`, these documents provide in-depth context, derivations, and discussions of foundational ideas.
+- **Get the data**: Various outputs from script runs are stashed in `/data`.
 
-Contradictions are not dismissed.  
-Confirmations are not celebrated.  
-Both are *tested for coherence*, not used to prove or disprove.
+## Scientific Posture
 
-## What You'll Find Here
+The HoloCosmo Project emphasizes:
 
-- **`doc/`**: Framing documents explaining the metaphysical foundation, links to existing literature, and known limitations.
-- **`src/`**: Core computational models exploring cosmological evolution under the holographic assumption.
-- **`data/`**: Various results of the core computational models.
+- **Neutrality**: The work is exploratory and does not claim novelty in physical laws nor predictive superiority over established models.
+- **Transparency**: Contradictions and confirmations alike are treated objectively, analyzed thoroughly, and transparently documented.
+- **Humility and Curiosity**: The aim is to test the coherence of ideas rather than to confirm preconceived notions.
 
-## Why This Exists
+## Objectives
 
-Sometimes a model is not a claim—it is a question.  
-This repository is that question, rendered in code.
+- **Test internal coherence** of the two foundational assumptions against cosmological and quantum mechanical phenomena.
+- **Generate testable predictions** and computational simulations that can be empirically evaluated.
+- **Foster interdisciplinary dialogue** between cosmology, quantum information, and gravitational physics communities.
 
-If you are here to test, refine, or calmly challenge that question, you're welcome.  
-If you are here to seek orthodoxy or rejection, you're in the wrong place.
+## Project Status
 
-## Status
-
-**Ongoing. Iterative.**
+This project is ongoing and iterative, continuously updated with new insights, simulations, and analyses.
 
 ## License
 
-MIT License (for openness, not for attribution)
+MIT License (chosen to maximize openness and collaboration, not attribution).
