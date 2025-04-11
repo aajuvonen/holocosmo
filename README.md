@@ -31,6 +31,7 @@ holocosmo/ ├── data/
            │ └── figures/
            ├── doc/               # Theoretical documents and PDFs
            ├── cdk/               # AWS CDK project for batch/cloud compute
+           ├── tests/             # Integration tests and unit tests for scripts
            ├── requirements.txt   # Python package dependencies
            ├── LICENSE            # MIT License — chosen to maximize openness and collaboration.
            └── README.md          # Project overview
