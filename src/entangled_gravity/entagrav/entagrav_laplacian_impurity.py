@@ -16,10 +16,10 @@ Lx, Ly, Lz = 32, 32, 32
 d = 2
 D = 3
 tau = 0.01
-num_steps = 5
+num_steps = 15
 J = 1.0
 h = 1.0
-h_impurity = 2.5  # transverse field in impurity region
+h_impurity = 3.0  # transverse field in impurity region
 
 # -----------------------------
 # Initialize PEPS
