@@ -3,16 +3,17 @@ import os
 import sys
 from pathlib import Path
 
-def test_gravity_laplacian_simulation_runs(tmp_path):
-    project_root = Path(__file__).parents[1]  # Go up to root of repo
-    script_path = project_root / "src/modeling/gravity_laplacian_simulation.py"
-    output_dir = tmp_path / "output"
+def test_gravity_laplacian_impurity_runs(tmp_path):
+    project_root = Path(__file__).parents[1]
+    script_path = project_root / "src/modeling/gravity_laplacian_impurity.py"
+    output_dir = tmp_path / "impurity_test"
     os.makedirs(output_dir, exist_ok=True)
 
     result = subprocess.run([
         sys.executable, str(script_path),
         "--lattice", "8", "8", "8",
         "--steps", "1",
+        "--h-impurity", "2.5",
         "--output-dir", str(output_dir)
     ], capture_output=True, text=True)
 
