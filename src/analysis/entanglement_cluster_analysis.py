@@ -14,7 +14,7 @@ It performs:
 Inputs (via CLI):
 ------------------
 --input FILE.csv        Path to input CSV (must contain x, y, z, laplacian)
---output-dir PATH       Directory for output files (default: data/processed/)
+--output-dir PATH       Directory for output files (default: ../../data/processed/)
 --pairs N               Number of random pairs (default: 1,000,000)
 --eps FLOAT             DBSCAN epsilon (default: 1.5)
 --min-samples INT       DBSCAN min_samples (default: 5)
@@ -46,7 +46,7 @@ from datetime import datetime
 def main():
     parser = argparse.ArgumentParser(description="Cluster & correlate entanglement curvature field")
     parser.add_argument("--input", type=str, required=True, help="CSV file with x, y, z, laplacian")
-    parser.add_argument("--output-dir", type=str, default="data/processed", help="Directory for output CSVs")
+    parser.add_argument("--output-dir", type=str, default="../../data/processed", help="Directory for output CSVs")
     parser.add_argument("--pairs", type=int, default=1000000, help="Number of random point pairs")
     parser.add_argument("--eps", type=float, default=1.5, help="DBSCAN epsilon")
     parser.add_argument("--min-samples", type=int, default=5, help="DBSCAN min_samples")
