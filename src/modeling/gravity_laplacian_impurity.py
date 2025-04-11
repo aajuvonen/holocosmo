@@ -22,7 +22,7 @@ Inputs (via CLI):
 - Coupling constant:       --J                          (default: 1.0)
 - Base transverse field:   --h                          (default: 1.0)
 - Impurity field strength: --h-impurity                 (default: 3.0)
-- Output location:         --output-dir                 (default: data/processed/)
+- Output location:         --output-dir                 (default: ../../data/processed/)
 - Show plot:               --plot                       (optional flag)
 
 Scientific Basis:
@@ -200,7 +200,7 @@ def main():
     parser.add_argument("--J", type=float, default=1.0)
     parser.add_argument("--h", type=float, default=1.0)
     parser.add_argument("--h-impurity", type=float, default=3.0)
-    parser.add_argument("--output-dir", type=str, default="data/processed")
+    parser.add_argument("--output-dir", type=str, default="../../data/processed")
     parser.add_argument("--plot", action="store_true")
     args = parser.parse_args()
 

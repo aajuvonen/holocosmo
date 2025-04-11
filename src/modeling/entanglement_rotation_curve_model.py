@@ -1,3 +1,37 @@
+"""
+entanglement_rotation_curve_model.py
+
+Author: The HoloCosmo Project
+Date: April 2025
+
+Description:
+-------------
+Explores the hypothesis that rotation curves in galaxies can be modeled from
+a radially decaying entanglement entropy profile S(r), interpreted as an effective potential.
+
+Demonstrates:
+- A toy model entropy profile: S(r) ∝ (1 + r/r0)^(-α)
+- Effective potential: Φ(r) ∝ -S(r)
+- Predicted rotation velocity: v(r) ∝ sqrt(r * dΦ/dr)
+- RMSE analysis and synthetic velocity data fitting
+
+Inputs:
+--------
+- Synthetic only: entropy and velocities generated within script
+
+Outputs:
+---------
+- Log-scale plot of entropy profile S(r)
+- Rotation velocity curve vs. synthetic observations
+- Residuals between observed and modeled velocity
+
+Scientific Context:
+-------------------
+This builds on the conjecture that entanglement structure underlies large-scale
+gravitational effects. It is loosely inspired by ideas in emergent gravity and
+information geometry approaches to cosmology.
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 

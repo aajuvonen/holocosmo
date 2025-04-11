@@ -15,3 +15,7 @@ Traces a geodesic path through a 3D curvature field using Dijkstra's algorithm.
 ## entanglement_curvature_deviation.py  
 Measures how small changes in geodesic start points impact path trajectories through curvature.  
 `python entanglement_curvature_deviation.py --input cluster_analysis.csv --start 2 2 2 --end 29 29 29`
+
+## sparc_fitting.py  
+Fits SPARC-format galaxy rotation curves using an entropic gravity model.  
+`python sparc_fitting.py`

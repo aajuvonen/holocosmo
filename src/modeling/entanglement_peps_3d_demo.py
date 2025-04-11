@@ -1,14 +1,34 @@
 """
-A schematic 3D PEPS simulation for a transverse-field Ising model on a 16x16x16 lattice.
-This code demonstrates:
-  - Initialization of a 3D PEPS state (each lattice site gets a tensor with one physical index and six bond indices).
-  - A simplified imaginary time evolution using a Trotter-Suzuki decomposition.
-  - A simplified two-site update along one bond direction using an SVD-based decomposition.
-  - A rudimentary extraction of local entanglement entropy via an SVD on a site tensor.
+entanglement_peps_3d_demo.py
 
-WARNING: This code is a didactic skeleton. It uses very simplistic updates and contractions.
-For serious simulations, one must implement a proper “simple” or “full” update algorithm and
-an accurate environment approximation (e.g. via corner transfer matrices).
+Author: The HoloCosmo Project
+Date: April 2025
+
+Description:
+-------------
+A schematic 3D PEPS simulation of a transverse-field Ising model on a 16x16x16 lattice.
+Demonstrates:
+- Initialization of a 3D PEPS network with small bond dimension
+- Very simplified imaginary time evolution via single-site + two-site gates
+- Local entanglement entropy estimation via SVD of single-site tensors
+
+This simulation illustrates the structure and evolution of PEPS tensor networks
+without incorporating Laplacian curvature or full environment contraction.
+
+Inputs:
+--------
+- None (synthetic PEPS lattice is initialized internally)
+
+Outputs:
+---------
+- Approximate local entropy field on a z-slice (k=0)
+- 2D plot of entropy field
+
+Scientific Context:
+-------------------
+This model forms a computational scaffold for later curvature/geometry-based
+entanglement analyses. It does not yet model emergent geometry directly, but
+lays the groundwork for such constructions.
 """
 
 import numpy as np

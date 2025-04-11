@@ -24,18 +24,15 @@ holocosmo/ ├── data/
            │ ├── 03_entangled_gravity.ipynb
            │ └── 04_analysis.ipynb
            ├── src/               # Source code and models (parameterized & modular)
-           │ ├── data_processing/ # Scripts to clean, convert, and prepare datasets
            │ ├── modeling/        # Simulation and computation modules
-           │ ├── analysis/        # Modules for analyzing modeling results
-           │ └── visualization/   # Plotting and presentation tools
-           ├── reports/           # Generated figures and summaries for publication or presentation
-           │ └── figures/
+           │ └── analysis/        # Modules for analyzing modeling results
            ├── doc/               # Theoretical documents and PDFs
            ├── cdk/               # AWS CDK project for batch/cloud compute
            ├── tests/             # Integration tests and unit tests for scripts
            ├── requirements.txt   # Python package dependencies
            ├── LICENSE            # MIT License — chosen to maximize openness and collaboration.
-           └── README.md          # Project overview
+           ├── README.md          # Project overview
+           └── CONTRIBUTING.mo    # Hop in, the water is lovely
 ```
 
 ## How to Engage with This Project

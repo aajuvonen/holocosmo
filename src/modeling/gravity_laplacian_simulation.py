@@ -19,7 +19,7 @@ Inputs (via CLI):
 - Number of steps:     --steps                     (default: 10)
 - Coupling strength:   --J                         (default: 1.0)
 - Transverse field:    --h                         (default: 1.0)
-- Output folder:       --output-dir path           (default: data/processed/)
+- Output folder:       --output-dir path           (default: ../../data/processed/)
 - Plot output:         --plot                      (flag to enable 3D scatter plot)
 
 Outputs:
@@ -239,7 +239,7 @@ def main():
     parser.add_argument("--steps", type=int, default=10, help="Number of time evolution steps")
     parser.add_argument("--J", type=float, default=1.0, help="Interaction strength J")
     parser.add_argument("--h", type=float, default=1.0, help="Transverse field h")
-    parser.add_argument("--output-dir", type=str, default="data/processed", help="Directory to store CSV output")
+    parser.add_argument("--output-dir", type=str, default="../../data/processed", help="Directory to store CSV output")
     parser.add_argument("--plot", action="store_true", help="Show 3D scatter plot of Laplacian")
     args = parser.parse_args()
 

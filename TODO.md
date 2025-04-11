@@ -1,7 +1,3 @@
 - prepare notebooks/
 - describe workflows with scripts
-- edit scripts: take parameters as input
-- edit scripts: output parameters in file names
-- edit scripts: always output to data/
-- edit scripts: entagrav/analysis: prompt for data to analyze
 - edit scripts: save figures instead of displaying them
