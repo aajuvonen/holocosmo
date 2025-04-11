@@ -26,6 +26,7 @@ holocosmo/ ├── data/
            ├── src/               # Source code and models (parameterized & modular)
            │ ├── data_processing/ # Scripts to clean, convert, and prepare datasets
            │ ├── modeling/        # Simulation and computation modules
+           │ ├── analysis/        # Modules for analyzing modeling results
            │ └── visualization/   # Plotting and presentation tools
            ├── reports/           # Generated figures and summaries for publication or presentation
            │ └── figures/

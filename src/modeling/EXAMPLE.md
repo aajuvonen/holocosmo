@@ -1,6 +1,6 @@
 # Modeling Scripts — Usage Examples
 
-## gravity_laplacian_simulation.py  
+## gravity_laplacian_simulation.py
 Computes entanglement entropy and its Laplacian (curvature proxy) from a 3D PEPS model.  
 `python gravity_laplacian_simulation.py --steps 5 --plot`
 
