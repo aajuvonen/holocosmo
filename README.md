@@ -11,46 +11,61 @@ This project adopts a scientifically rigorous yet non-dogmatic stance. It neithe
 
 ## Repository Structure
 
-The project repository is organized into several components:
+The repository is structured to separate raw data, scripts, analysis, and theoretical work. This supports transparency, modular development, and reproducibility.
 
 ```
-holocosmo/ ├── doc/                    # Theoretical documents and PDFs
-           ├── src/                    # Python scripts and modules (for simulation & models)
-           ├── data/                   # Outputs from simulation runs
-           ├── notebooks/              # Jupyter Notebooks tying together the project
-           │   ├── Introduction.ipynb          # Overview, background, and project goals
-           │   ├── Holographic_Cosmology.ipynb # Notebooks on holography & dark energy
-           │   ├── Emergent_Gravity.ipynb      # Notebooks on entanglement and gravity
-           │   └── Analysis.ipynb              # Notebooks for simulation outputs and plots
-           ├── README.md               # Overview of the project
-           └── requirements.txt        # List of Python packages needed
+holocosmo/ ├── data/
+           │ ├── raw/             # Untouched input datasets (e.g. observational catalogs, .dat files)
+           │ ├── interim/         # Intermediate files produced during computations
+           │ └── processed/       # Final data products suitable for analysis or plotting
+           ├── notebooks/         # Jupyter Notebooks for exploration, modeling, and results
+           │ ├── 01_intro.ipynb
+           │ ├── 02_holography.ipynb
+           │ ├── 03_entangled_gravity.ipynb
+           │ └── 04_analysis.ipynb
+           ├── src/               # Source code and models (parameterized & modular)
+           │ ├── data_processing/ # Scripts to clean, convert, and prepare datasets
+           │ ├── modeling/        # Simulation and computation modules
+           │ └── visualization/   # Plotting and presentation tools
+           ├── reports/           # Generated figures and summaries for publication or presentation
+           │ └── figures/
+           ├── doc/               # Theoretical documents and PDFs
+           ├── cdk/               # AWS CDK project for batch/cloud compute
+           ├── requirements.txt   # Python package dependencies
+           ├── LICENSE            # MIT License — chosen to maximize openness and collaboration.
+           └── README.md          # Project overview
 ```
 
 ## How to Engage with This Project
 
-- **Explore the notebooks**: Peek at our `/notebooks` that integrate theory, computation, and visualization to provide clear pathways through the project's logic and results.
-- **Examine the code**: Python scripts in `/src` implement the computational models central to this exploration.
-- **Review theoretical papers**: Found in `/doc`, these documents provide in-depth context, derivations, and discussions of foundational ideas.
-- **Get the data**: Various outputs from script runs are stashed in `/data`.
+- **Explore the Notebooks**: Go to `/notebooks` for the story — step-by-step walkthroughs of the ideas, models, and analysis.
+- **Run the Code**: Modular Python scripts in `/src` implement the key computational logic. Scripts accept command-line parameters and produce timestamped outputs to avoid overwriting.
+- **Check the Data**: All outputs are saved to `/data`, organized into `raw`, `interim`, and `processed` stages to ensure data provenance.
+- **Read the Theory**: Dive into derivations and conceptual underpinnings in the `/doc` directory.
+- **Use the Infrastructure** *(Experimental)*: The `/cdk` folder contains an AWS CDK TypeScript project intended for scaling computations in the cloud (documentation coming soon).
 
 ## Scientific Posture
 
 The HoloCosmo Project emphasizes:
 
-- **Neutrality**: The work is exploratory and does not claim novelty in physical laws nor predictive superiority over established models.
-- **Transparency**: Contradictions and confirmations alike are treated objectively, analyzed thoroughly, and transparently documented.
-- **Humility and Curiosity**: The aim is to test the coherence of ideas rather than to confirm preconceived notions.
+- **Neutrality**: It is not intended as a replacement to ΛCDM or any other framework — but as a tool to examine what falls out from a different starting point.
+- **Transparency**: All simulations, results, and inconsistencies are documented honestly.
+- **Humility and Curiosity**: The goal is understanding and coherence, not confirmation or refutation.
 
 ## Objectives
 
-- **Test internal coherence** of the two foundational assumptions against cosmological and quantum mechanical phenomena.
-- **Generate testable predictions** and computational simulations that can be empirically evaluated.
-- **Foster interdisciplinary dialogue** between cosmology, quantum information, and gravitational physics communities.
+- **Test internal coherence** of holography- and entanglement-based cosmological principles.
+- **Generate simulation outputs** that are computationally viable and can be compared to empirical data.
+- **Foster interdisciplinary dialogue** between cosmology, quantum information, and gravitational physics.
 
-## Project Status
+## Status
 
-This project is ongoing and iterative, continuously updated with new insights, simulations, and analyses.
+The project is evolving. Some components are mature, others are in flux. Current priorities:
+
+- Refactoring scripts for reproducibility and resource efficiency
+- Cloud processing for heavy simulations
+- Wrapping models and data pipelines into documented workflows
 
 ## License
 
-MIT License (chosen to maximize openness and collaboration, not attribution).
+MIT License — chosen to maximize openness and collaboration.
