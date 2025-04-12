@@ -35,6 +35,53 @@ holocosmo/ ├── data/
            └── CONTRIBUTING.mo    # Hop in, the water is lovely
 ```
 
+## HC Identifier System
+
+The repository is in the process of adopting a unified identifier scheme for all modeling, analysis, outputs, notebooks, and documentation using the format:
+
+HC-NNN-CAT
+
+Where:
+- HC is the project prefix.
+- NNN is a unique, running number (e.g., 001, 002, ...).
+- CAT is an optional category tag such as:
+  - MOD: Modeling script
+  - ANA: Analysis script
+  - NBK: Jupyter Notebook
+  - OUT: Output file
+  - DOC: Documentation or publication draft
+  - TST: Test script
+  - DAT: Dataset
+
+This system allows for consistent cross-referencing between related components. For example, HC-006 may include a modeling script (HC-006-MOD.py), analysis notebook (HC-006-NBK.ipynb), output file (HC-006-OUT.csv), and an associated paper (HC-006-DOC.md).
+
+### Adding New Entries
+
+To initialize a new HC entry, use:
+
+  python init_holocosmo_entry.py "Description of new experiment" --categories MOD NBK OUT DOC
+
+Optional flags:
+- --dry-run: Preview changes without writing files.
+- --folder <dir>: Place all generated files in a specified directory.
+- --update-registry-only: Skip file creation and only register the new ID.
+
+This will:
+- Assign the next available HC identifier
+- Generate blank files in their appropriate folders
+- Update the hc_registry.yaml tracking file
+
+For details, refer to INIT_HOLOCOSMO.md.
+
+### Migrating Existing Scripts
+
+Legacy files are not renamed directly. Instead, for each migrated effort:
+- A new HC ID is assigned using the same script
+- The related code, notebooks, outputs, or documents are manually copied into the newly generated blank files
+- Once the migration is validated, original non-HC files may be deprecated and removed
+
+This incremental migration approach ensures minimal disruption while gradually introducing traceability and modularity across the project.
+
 ## How to Engage with This Project
 
 - **Explore the Notebooks**: Go to `/notebooks` for the story — step-by-step walkthroughs of the ideas, models, and analysis.
