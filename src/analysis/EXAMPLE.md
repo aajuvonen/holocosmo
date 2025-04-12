@@ -19,3 +19,7 @@ Measures how small changes in geodesic start points impact path trajectories thr
 ## sparc_fitting.py  
 Fits SPARC-format galaxy rotation curves using an entropic gravity model.  
 `python sparc_fitting.py`
+
+## radial_profile.py  
+Computes radial averages of the curvature (Laplacian) field from a 3D entanglement lattice.  
+`python radial_profile.py --input-file data.csv --output-file radial_profile.csv --bins 50`

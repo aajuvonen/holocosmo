@@ -29,7 +29,7 @@ Usage:
 
 Note:
 ------
-This version scans data/sparc/ for input files (instead of current working dir).
+This version scans data/raw/sparc/ for input files (instead of current working dir).
 """
 
 import os
@@ -52,7 +52,7 @@ def v_total(r, kappa, r0, alpha, vbar):
 def main():
     # Resolve path to the data directory relative to this script
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    data_dir = os.path.normpath(os.path.join(base_dir, "..", "..", "data", "sparc"))
+    data_dir = os.path.normpath(os.path.join(base_dir, "..", "..", "data", "raw", "sparc"))
     
     dat_files = [f for f in os.listdir(data_dir) if f.endswith('.dat')]
     if not dat_files:
