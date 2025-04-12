@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 radial_profile.py
 -----------------
@@ -8,7 +7,7 @@ It reads a CSV file containing a 3D lattice of data points with columns:
 and computes the Euclidean distance of each point from a specified center.
 Then it bins the data in radial shells and calculates statistics (mean, standard deviation,
 and count) for the Laplacian (curvature proxy) in each bin.
-The results are saved to an output CSV file.
+The results are saved to an output CSV file and a figure.
 
 Usage:
     python radial_profile.py --input-file path/to/input.csv \
@@ -44,7 +43,13 @@ def parse_arguments():
     parser.add_argument("--center", type=float, nargs=3, metavar=('CX', 'CY', 'CZ'),
                         help="Coordinates (x y z) of the center point to compute radial distances from. "
                              "If omitted, the center of the data's bounding box is used.")
-    return parser.parse_args()
+    args = parser.parse_args()
+
+    # Ensure the output filename ends in .csv
+    if not args.output_file.endswith(".csv"):
+        args.output_file += ".csv"
+
+    return args
 
 def compute_geometric_center(df):
     cx = (df['x'].min() + df['x'].max()) / 2.0
@@ -67,8 +72,9 @@ def compute_radial_profile(df, center, nbins):
 
 def save_radial_profile(output_dir, output_file, bin_centers, mean_vals, std_vals, counts):
     timestamp = datetime.now().strftime("%Y%m%d-%H%M")
-    final_filename = f"{timestamp}_{output_file}"
-    full_path = os.path.join(output_dir, final_filename)
+    basename = os.path.basename(output_file).replace(".csv", "")
+    filename_only = f"{timestamp}_{basename}.csv"
+    full_path = os.path.join(output_dir, filename_only)
     os.makedirs(output_dir, exist_ok=True)
 
     df_out = pd.DataFrame({
@@ -79,7 +85,7 @@ def save_radial_profile(output_dir, output_file, bin_centers, mean_vals, std_val
     })
     df_out.to_csv(full_path, index=False)
     print(f"Radial profile saved to {full_path}")
-    return final_filename
+    return filename_only  # no path, just filename with timestamp
 
 def main():
     args = parse_arguments()
@@ -98,8 +104,8 @@ def main():
 
     output_filename = save_radial_profile(args.output_dir, args.output_file, bin_centers, mean_vals, std_vals, counts)
 
-    # Optional plot
-    plt.figure(figsize=(8, 6))
+    # Plot and save figure
+    fig = plt.figure(figsize=(8, 6))
     plt.errorbar(bin_centers, mean_vals, yerr=std_vals, fmt='o-', capsize=4, label="Mean Laplacian")
     plt.title("Radial Profile of Entanglement Curvature")
     plt.xlabel("Radial Distance from Center")
@@ -107,6 +113,15 @@ def main():
     plt.grid(True)
     plt.legend()
     plt.tight_layout()
+
+    # Save to figures directory with matching timestamped name
+    fig_dir = "../../data/figures/"
+    os.makedirs(fig_dir, exist_ok=True)
+    fig_name = output_filename.replace(".csv", ".png")
+    fig_path = os.path.join(fig_dir, fig_name)
+    fig.savefig(fig_path)
+    print(f"Figure saved to {os.path.abspath(fig_path)}")
+
     plt.show()
 
 if __name__ == "__main__":
