@@ -23,3 +23,9 @@ Fits SPARC-format galaxy rotation curves using an entropic gravity model.
 ## radial_profile.py  
 Computes radial averages of the curvature (Laplacian) field from a 3D entanglement lattice.  
 `python radial_profile.py --input-file data.csv --output-file radial_profile.csv --bins 50`
+
+## potential_fitting.py  
+Fits an effective gravitational potential (Yukawa or Gaussian) to radial curvature data extracted from PEPS simulations.  
+Outputs a figure and a CSV with best-fit parameters and residuals.  
+`python potential_fitting.py --input-file ../../data/processed/20250412-1057_radial_profile.csv --model yukawa --output-file potential_fit.png`
+
