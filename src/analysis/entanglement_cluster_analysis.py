@@ -15,10 +15,11 @@ Inputs (via CLI):
 ------------------
 --input FILE.csv        Path to input CSV (must contain x, y, z, laplacian)
 --output-dir PATH       Directory for output files (default: ../../data/processed/)
---pairs N               Number of random pairs (default: 1,000,000)
+--pairs N               Number of random point pairs (default: 1,000,000)
 --eps FLOAT             DBSCAN epsilon (default: 1.5)
 --min-samples INT       DBSCAN min_samples (default: 5)
 --bins INT              Number of distance bins (default: 200)
+--laplacian-threshold F Only consider points with |laplacian| ≥ threshold for clustering (optional)
 
 Outputs:
 ---------
@@ -31,7 +32,6 @@ Draws on clustering behavior and correlation structures in the Laplacian (curvat
 referencing:
 - "Entanglement Curvature: A Tensorial Approach..."
 - "An Effective Field Equation for Emergent Gravity..."
-
 """
 
 import argparse
@@ -51,42 +51,52 @@ def main():
     parser.add_argument("--eps", type=float, default=1.5, help="DBSCAN epsilon")
     parser.add_argument("--min-samples", type=int, default=5, help="DBSCAN min_samples")
     parser.add_argument("--bins", type=int, default=200, help="Number of distance bins for correlation")
+    parser.add_argument("--laplacian-threshold", type=float, default=None,
+                        help="Only include points with |laplacian| >= threshold for DBSCAN (optional)")
     args = parser.parse_args()
 
     os.makedirs(args.output_dir, exist_ok=True)
 
     print("Loading input data...")
     data = pd.read_csv(args.input)
-    coords = data[['x', 'y', 'z']].values
-    laplacian = data['laplacian'].values
 
-    # --- Clustering ---
+    # Filter data for clustering if threshold is set
+    if args.laplacian_threshold is not None:
+        cluster_mask = np.abs(data['laplacian']) >= args.laplacian_threshold
+        cluster_data = data[cluster_mask].copy()
+        print(f"Filtered {len(data) - len(cluster_data)} points with |laplacian| < {args.laplacian_threshold}")
+    else:
+        cluster_data = data.copy()
+
+    coords = cluster_data[['x', 'y', 'z']].values
+    laplacian = cluster_data['laplacian'].values
+
     print("Running DBSCAN clustering...")
-    dbscan = DBSCAN(eps=args.eps, min_samples=args.min_samples, n_jobs=-1)
-    clusters = dbscan.fit_predict(np.column_stack((coords, laplacian)))
-
-    cluster_df = pd.DataFrame({
-        'x': data['x'],
-        'y': data['y'],
-        'z': data['z'],
-        'laplacian': laplacian,
-        'cluster_label': clusters
-    })
+    if len(coords) == 0:
+        print("No points passed the Laplacian threshold. Skipping clustering.")
+        cluster_data['cluster_label'] = []
+    else:
+        dbscan = DBSCAN(eps=args.eps, min_samples=args.min_samples, n_jobs=-1)
+        clusters = dbscan.fit_predict(np.column_stack((coords, laplacian)))
+        cluster_data['cluster_label'] = clusters
 
     timestamp = datetime.now().strftime("%Y%m%d-%H%M")
     cluster_file = os.path.join(args.output_dir, f"{timestamp}_cluster_analysis.csv")
-    cluster_df.to_csv(cluster_file, index=False)
+    cluster_data.to_csv(cluster_file, index=False)
     print(f"Saved cluster results to {cluster_file}")
 
     # --- Spatial Correlation ---
     print("Computing spatial correlation function...")
     np.random.seed(42)
-    total_points = len(coords)
+    all_coords = data[['x', 'y', 'z']].values
+    all_laplacian = data['laplacian'].values
+    total_points = len(all_coords)
+
     idx_a = np.random.choice(total_points, args.pairs, replace=True)
     idx_b = np.random.choice(total_points, args.pairs, replace=True)
 
-    distances = np.linalg.norm(coords[idx_a] - coords[idx_b], axis=1)
-    laplacian_diff = laplacian[idx_a] - laplacian[idx_b]
+    distances = np.linalg.norm(all_coords[idx_a] - all_coords[idx_b], axis=1)
+    laplacian_diff = all_laplacian[idx_a] - all_laplacian[idx_b]
 
     corr_values, bin_edges, _ = binned_statistic(
         distances,
@@ -109,7 +119,6 @@ def main():
         for dist, corr in zip(bin_centers, corr_values):
             if not np.isnan(corr):
                 writer.writerow([dist, corr])
-
     print(f"Saved spatial correlation to {correlation_file}")
 
 if __name__ == "__main__":

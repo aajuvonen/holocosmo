@@ -29,3 +29,7 @@ Fits an effective gravitational potential (Yukawa or Gaussian) to radial curvatu
 Outputs a figure and a CSV with best-fit parameters and residuals.  
 `python potential_fitting.py --input-file ../../data/processed/20250412-1057_radial_profile.csv --model yukawa --output-file potential_fit.png`
 
+## visualize_laplacian_3d.py  
+Generates a 3D scatter plot of Laplacian (entanglement curvature) values from a PEPS simulation cluster analysis.  
+`python3 visualize_laplacian_3d.py --input data/processed/20250413-1417_cluster_analysis.csv --threshold 0.025 --sample 3000 --show`
+

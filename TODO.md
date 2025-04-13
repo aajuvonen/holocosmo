@@ -1,3 +1,4 @@
+- refactor the project using init_holocosmo_entry.py
 - prepare notebooks/
 - describe workflows with scripts
 - edit scripts: save figures instead of displaying them
