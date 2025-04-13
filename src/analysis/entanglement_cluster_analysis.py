@@ -18,12 +18,12 @@ Inputs (via CLI):
 --pairs N               Number of random pairs (default: 1,000,000)
 --eps FLOAT             DBSCAN epsilon (default: 1.5)
 --min-samples INT       DBSCAN min_samples (default: 5)
---bins INT              Number of distance bins (default: 1000)
+--bins INT              Number of distance bins (default: 200)
 
 Outputs:
 ---------
 - CSV with all points + cluster labels
-- CSV with binned spatial correlation values
+- CSV with binned spatial correlation values (NaNs dropped)
 
 Scientific Basis:
 ------------------
@@ -50,7 +50,7 @@ def main():
     parser.add_argument("--pairs", type=int, default=1000000, help="Number of random point pairs")
     parser.add_argument("--eps", type=float, default=1.5, help="DBSCAN epsilon")
     parser.add_argument("--min-samples", type=int, default=5, help="DBSCAN min_samples")
-    parser.add_argument("--bins", type=int, default=1000, help="Number of distance bins for correlation")
+    parser.add_argument("--bins", type=int, default=200, help="Number of distance bins for correlation")
     args = parser.parse_args()
 
     os.makedirs(args.output_dir, exist_ok=True)
@@ -96,14 +96,21 @@ def main():
     )
     bin_centers = 0.5 * (bin_edges[:-1] + bin_edges[1:])
 
+    # Debug: print bin occupancy
+    hist, _ = np.histogram(distances, bins=bin_edges)
+    populated_bins = (hist > 0).sum()
+    print(f"Correlation: {populated_bins}/{len(hist)} bins populated with data.")
+    print(f"Dropping {np.isnan(corr_values).sum()} bins with NaN correlation values.")
+
     correlation_file = os.path.join(args.output_dir, f"{timestamp}_spatial_correlation.csv")
     with open(correlation_file, 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(['distance_bin_center', 'correlation_value'])
         for dist, corr in zip(bin_centers, corr_values):
-            writer.writerow([dist, corr])
+            if not np.isnan(corr):
+                writer.writerow([dist, corr])
+
     print(f"Saved spatial correlation to {correlation_file}")
 
 if __name__ == "__main__":
     main()
-
