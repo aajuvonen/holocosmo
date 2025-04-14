@@ -95,15 +95,15 @@ def main():
 
     # Define category mapping: each key maps to (default folder, default file extension)
     category_mapping = {
-        'MOD': ('src/modeling', '.py'),
-        'ANA': ('src/analysis', '.py'),
-        'NBK': ('notebooks', '.ipynb'),
-        'OUT': ('data/processed', '.csv'),
-        'FIG': ('data/figures', '.svg'),
-        'DAT': ('data/raw', '.csv'),
-        'DOC': ('doc/papers/tex', '.tex'),
-        'VIS': ('data/figures', '.png'),
-        'TST': ('tests', '.py')
+        'MOD': ('../src/modeling', '.py'),
+        'ANA': ('../src/analysis', '.py'),
+        'NBK': ('../notebooks', '.ipynb'),
+        'OUT': ('../data/processed', '.csv'),
+        'FIG': ('../data/figures', '.svg'),
+        'DAT': ('../data/raw', '.csv'),
+        'DOC': ('../doc/papers/tex', '.tex'),
+        'VIS': ('../data/figures', '.png'),
+        'TST': ('../tests', '.py')
     }
     
     registry_path = "hc_registry.yaml"

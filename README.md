@@ -26,13 +26,17 @@ holocosmo/ ├── data/
            ├── src/               # Source code and models (parameterized & modular)
            │ ├── modeling/        # Simulation and computation modules
            │ └── analysis/        # Modules for analyzing modeling results
-           ├── doc/               # Theoretical documents and PDFs
+           ├── doc/               # Documents and PDFs
+           │ ├── papers/          # Theoretical basis for models
+           │ ├── requirements.txt # Python package dependencies
+           │ ├── TODO.md          # A memo for things that need taking care of
+           │ └── CONTRIBUTING.md  # Hop in, the water is lovely
            ├── cdk/               # AWS CDK project for batch/cloud compute
            ├── tests/             # Integration tests and unit tests for scripts
-           ├── requirements.txt   # Python package dependencies
+           ├── 
            ├── LICENSE            # MIT License — chosen to maximize openness and collaboration.
-           ├── README.md          # Project overview
-           └── CONTRIBUTING.mo    # Hop in, the water is lovely
+           └── README.md          # Project overview
+           
 ```
 
 ## HC Identifier System
