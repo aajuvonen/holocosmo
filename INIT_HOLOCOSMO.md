@@ -23,7 +23,7 @@ This command will:
   - src/modeling/HC-006-MOD_descriptive_title.py
   - notebooks/HC-006-NBK_descriptive_title.ipynb
   - data/processed/HC-006-OUT_descriptive_title.csv
-  - doc/papers/HC-006-DOC_descriptive_title.md
+  - doc/papers/tex/HC-006-DOC_descriptive_title.tex
 - Update the hc_registry.yaml registry file with details of the new entry.
 
 ### 2. Optional Flags
@@ -88,13 +88,3 @@ All changes and new file creations are logged in the registry file (hc_registry.
   find . -name 'HC-XYZ*'
 
 This process helps ensure traceability and ease of maintenance as your project evolves.
-
----
-
-## Final Notes
-
-- **Incremental Approach:** Migrate new work using the init_hc_entry.py script, and gradually transition legacy files.
-- **Version Control:** Use Git or another version control system to commit changes at every step.
-- **Customization:** Feel free to modify the script and this guide as your workflow evolves.
-
-Happy coding, and may the HC entries bring order to your Sisyphean labors!

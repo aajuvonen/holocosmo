@@ -101,7 +101,7 @@ def main():
         'NBK': ('notebooks', '.ipynb'),
         'OUT': ('data/processed', '.csv'),
         'DAT': ('data/raw', '.csv'),
-        'DOC': ('doc/papers', '.md'),
+        'DOC': ('doc/papers/tex', '.tex'),
         'VIS': ('data/figures', '.png'),
         'TST': ('tests', '.py')
     }
