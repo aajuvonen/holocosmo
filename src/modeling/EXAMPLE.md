@@ -12,9 +12,13 @@ Demonstrates curvature tensor extraction from a synthetic entropy field.
 Simulates a 2x2x2 spin lattice and extracts entanglement curvature via entropy Laplacian.  
 `python HC-003-MOD_entanglement_curvature_3d.py`
 
-## entanglement_peps_3d_demo.py
+## HC-004-MOD_tensorial_entanglement_curvature.py
 Simulates a schematic 3D PEPS network on a 16×16×16 lattice and visualizes local entropy.  
-`python entanglement_peps_3d_demo.py`
+`python HC-004-MOD_tensorial_entanglement_curvature.py`
+
+## HC-005-MOD_effective_field_equation.py
+Simulates an effective gravitational field equation derived from quantum entanglement entropy.
+`python HC-005-MOD_effective_field_equation.py`
 
 ## gravity_laplacian_simulation.py
 Computes entanglement entropy and its Laplacian (curvature proxy) from a 3D PEPS model.  

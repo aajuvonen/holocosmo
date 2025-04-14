@@ -31,3 +31,25 @@
   - src/modeling/HC-003-MOD_entanglement_curvature_3d.py
   id: HC-003
   title: Entanglement curvature 3D
+- categories:
+  - DOC
+  - TST
+  - MOD
+  created: '2025-04-14T20:16:07.642826'
+  files:
+  - doc/papers/tex/HC-004-DOC_tensorial_entanglement_curvature.tex
+  - tests/HC-004-TST_tensorial_entanglement_curvature.py
+  - src/modeling/HC-004-MOD_tensorial_entanglement_curvature.py
+  id: HC-004
+  title: Tensorial entanglement curvature
+- categories:
+  - DOC
+  - TST
+  - MOD
+  created: '2025-04-14T20:27:41.958863'
+  files:
+  - doc/papers/tex/HC-005-DOC_effective_field_equation.tex
+  - tests/HC-005-TST_effective_field_equation.py
+  - src/modeling/HC-005-MOD_effective_field_equation.py
+  id: HC-005
+  title: Effective field equation
