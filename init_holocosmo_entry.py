@@ -130,7 +130,8 @@ def main():
             cat = cat.upper()
             file_path = generate_file_path(args.folder, next_id, cat, title_slug, category_mapping)
             # Build template content based on category
-            content = f"# {next_id}-{cat}: {args.title}\n# Created on {entry['created']}\n"
+            comment_symbol = '%' if cat == 'DOC' else '#'
+            content = f"{comment_symbol} {next_id}-{cat}: {args.title}\n{comment_symbol} Created on {entry['created']}\n"
             if cat == "TST":
                 # A simple unit test template
                 content += "\nimport unittest\n\nclass TestSomething(unittest.TestCase):\n    def test_example(self):\n        self.assertTrue(True)\n\nif __name__ == '__main__':\n    unittest.main()\n"

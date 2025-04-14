@@ -1,0 +1,11 @@
+- categories:
+  - MOD
+  - DOC
+  - TST
+  created: '2025-04-14T17:26:52.029854'
+  files:
+  - src/modeling/HC-001-MOD_dynamic_holographic_dark_energy.py
+  - doc/papers/tex/HC-001-DOC_dynamic_holographic_dark_energy.tex
+  - tests/HC-001-TST_dynamic_holographic_dark_energy.py
+  id: HC-001
+  title: Dynamic holographic dark energy
