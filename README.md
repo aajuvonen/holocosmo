@@ -15,10 +15,11 @@ The repository is structured to separate raw data, scripts, analysis, and theore
 
 ```
 holocosmo/ ├── data/
+           │ ├── figures/         # Output figures, usually .svg or .png
            │ ├── raw/             # Untouched input datasets (e.g. observational catalogs, .dat files)
            │ ├── interim/         # Intermediate files produced during computations
            │ └── processed/       # Final data products suitable for analysis or plotting
-           ├── notebooks/         # Jupyter Notebooks for exploration, modeling, and results
+           ├── notebooks/         # Jupyter Notebooks for exploration, modeling, and results (TODO)
            │ ├── 01_intro.ipynb
            │ ├── 02_holography.ipynb
            │ ├── 03_entangled_gravity.ipynb
@@ -29,11 +30,12 @@ holocosmo/ ├── data/
            ├── doc/               # Documents and PDFs
            │ ├── papers/          # Theoretical basis for models
            │ ├── requirements.txt # Python package dependencies
+           │ ├── hc_entry.py      # A script for initializing HC Identifiers
+           │ ├── hc_registry.yaml # The catalog of HC Identifiers
            │ ├── TODO.md          # A memo for things that need taking care of
            │ └── CONTRIBUTING.md  # Hop in, the water is lovely
            ├── cdk/               # AWS CDK project for batch/cloud compute
            ├── tests/             # Integration tests and unit tests for scripts
-           ├── 
            ├── LICENSE            # MIT License — chosen to maximize openness and collaboration.
            └── README.md          # Project overview
            

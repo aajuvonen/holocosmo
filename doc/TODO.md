@@ -1,6 +1,6 @@
-- refactor the project using init_holocosmo_entry.py
+- refactor the project using doc/hc_entry.py
 - prepare notebooks/
 - describe workflows with scripts
-- edit scripts: save figures instead of displaying them
+- edit scripts: save figures instead of only displaying them
 - edit tests: run tests without displaying the figures
 - edit tests: save temporary data to data/interim/
