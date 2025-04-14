@@ -49,11 +49,12 @@ Where:
   - ANA: Analysis script
   - NBK: Jupyter Notebook
   - OUT: Output file
+  - FIG: Figure file
   - DOC: Documentation or publication draft
   - TST: Test script
   - DAT: Dataset
 
-This system allows for consistent cross-referencing between related components. For example, HC-006 may include a modeling script (HC-006-MOD.py), analysis notebook (HC-006-NBK.ipynb), output file (HC-006-OUT.csv), and an associated paper (HC-006-DOC.md).
+This system allows for consistent cross-referencing between related components. For example, HC-006 may include a modeling script (HC-006-MOD.py), analysis notebook (HC-006-NBK.ipynb), output file (HC-006-OUT.csv), and an associated paper (HC-006-DOC.tex).
 
 ### Adding New Entries
 

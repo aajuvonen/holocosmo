@@ -1,18 +1,18 @@
 # Modeling Scripts — Usage Examples
 
-### holographic_model.py
+### HC-001-MOD_dynamic_holographic_dark_energy.py
 Simulates holographic vacuum cosmology using dynamical horizon evolution. Saves derived quantities to CSV to `data/processed` and exports figures to `data/figures/`.
-`python src/analysis/holographic_model.py`
+`python HC-001-MOD_dynamic_holographic_dark_energy.py`
 
-## entanglement_curvature_tensor_demo.py  
+## HC-002-MOD_entanglement_curvature_1d.py
 Demonstrates curvature tensor extraction from a synthetic entropy field.  
-`python entanglement_curvature_tensor_demo.py`
+`python HC-002-MOD_entanglement_curvature_1d.py`
 
-## entanglement_curvature_tensor_3d_demo.py  
+## HC-003-MOD_entanglement_curvature_3d.py
 Simulates a 2x2x2 spin lattice and extracts entanglement curvature via entropy Laplacian.  
-`python entanglement_curvature_tensor_3d_demo.py`
+`python HC-003-MOD_entanglement_curvature_3d.py`
 
-## entanglement_peps_3d_demo.py  
+## entanglement_peps_3d_demo.py
 Simulates a schematic 3D PEPS network on a 16×16×16 lattice and visualizes local entropy.  
 `python entanglement_peps_3d_demo.py`
 

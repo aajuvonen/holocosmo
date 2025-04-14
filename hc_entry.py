@@ -1,13 +1,12 @@
-#!/usr/bin/env python3
 """
-init_hc_entry.py
+hc_entry.py
 
 A command-line tool to initialize a new HoloCosmo (HC-NNN) entry.
 It assigns a new identifier, updates a YAML registry file, and scaffolds template files 
 for selected categories in the current repository structure.
 
 Usage:
-  python init_hc_entry.py "Descriptive title of experiment" --categories MOD NBK OUT DOC [--folder path/to/base] [--dry-run] [--update-registry-only]
+  python hc_entry.py "Descriptive title of experiment" --categories MOD NBK OUT DOC [--folder path/to/base] [--dry-run] [--update-registry-only]
 """
 
 import os
@@ -100,6 +99,7 @@ def main():
         'ANA': ('src/analysis', '.py'),
         'NBK': ('notebooks', '.ipynb'),
         'OUT': ('data/processed', '.csv'),
+        'FIG': ('data/figures', '.svg'),
         'DAT': ('data/raw', '.csv'),
         'DOC': ('doc/papers/tex', '.tex'),
         'VIS': ('data/figures', '.png'),

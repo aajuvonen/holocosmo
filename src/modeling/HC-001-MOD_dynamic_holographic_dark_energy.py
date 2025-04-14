@@ -18,12 +18,12 @@ Implements a simple ODE model capturing:
 
 Outputs:
 ---------
-- Timestamped CSV: data/processed/YYYYMMDD-HHMM_holographic_output.csv
-- Timestamped Figures: 5 PNG plots in data/figures/
+- Timestamped CSV: data/processed/HC-001-MOD-YYYYMMDD-HHMM_holographic_output.csv
+- Timestamped Figures: 5 SVG plots in data/figures/
 
-Scientific Reference:
+Paper Reference:
 ----------------------
-"A Unified Holographic Solution to the Vacuum Catastrophe and a Dynamic Model of Dark Energy" (2025)
+- HC-001-DOC: A Dynamic Holographic Model for Dark Energy
 """
 
 import numpy as np
@@ -104,7 +104,7 @@ H_LCDM = H0 * np.sqrt(Omega_m0 * (1 + z)**3 + Omega_Lambda0)
 # Save CSV Output
 # -------------------------------------------------------
 os.makedirs("data/processed", exist_ok=True)
-output_csv = f"data/processed/{timestamp}holographic_output.csv"
+output_csv = f"data/processed/HC-001-OUT-{timestamp}holographic_output.csv"
 df = pd.DataFrame({
     't': t,
     'a': a,
@@ -135,7 +135,7 @@ plt.gca().invert_xaxis()
 plt.grid(True)
 plt.legend()
 plt.tight_layout()
-plt.savefig(f"data/figures/{timestamp}holographic_hubble_vs_lcdm.svg")
+plt.savefig(f"data/figures/HC-001-FIG-{timestamp}holographic_hubble_vs_lcdm.svg")
 
 # 2. Effective Equation of State w_eff(t)
 plt.figure()
@@ -146,7 +146,7 @@ plt.ylabel("Effective w(t)")
 plt.title("Equation of State w_eff(t)")
 plt.grid(True)
 plt.tight_layout()
-plt.savefig(f"data/figures/{timestamp}holographic_weff_vs_time.svg")
+plt.savefig(f"data/figures/HC-001-FIG-{timestamp}holographic_weff_vs_time.svg")
 
 # 3. Energy Densities: Matter and Vacuum
 plt.figure()
@@ -159,7 +159,7 @@ plt.title("Matter vs Vacuum Energy")
 plt.legend()
 plt.grid(True)
 plt.tight_layout()
-plt.savefig(f"data/figures/{timestamp}holographic_energy_components.svg")
+plt.savefig(f"data/figures/HC-001-FIG-{timestamp}holographic_energy_components.svg")
 
 # 4. Matter-to-Vacuum Ratio
 plt.figure()
@@ -170,7 +170,7 @@ plt.ylabel("ρ_m / ρ_eff")
 plt.title("Matter-to-Vacuum Energy Ratio Over Time")
 plt.grid(True)
 plt.tight_layout()
-plt.savefig(f"data/figures/{timestamp}holographic_matter_to_vacuum_ratio.svg")
+plt.savefig(f"data/figures/HC-001-FIG-{timestamp}holographic_matter_to_vacuum_ratio.svg")
 
 # 5. w_eff vs Redshift
 plt.figure()
@@ -181,6 +181,6 @@ plt.title("w_eff vs Redshift")
 plt.gca().invert_xaxis()
 plt.grid(True)
 plt.tight_layout()
-plt.savefig(f"data/figures/{timestamp}holographic_weff_vs_z.svg")
+plt.savefig(f"data/figures/HC-001-FIG-{timestamp}holographic_weff_vs_z.svg")
 
 print("All figures saved to data/figures/")

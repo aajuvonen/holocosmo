@@ -2,3 +2,5 @@
 - prepare notebooks/
 - describe workflows with scripts
 - edit scripts: save figures instead of displaying them
+- edit tests: run tests without displaying the figures
+- edit tests: save temporary data to data/interim/

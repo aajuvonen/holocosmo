@@ -9,3 +9,25 @@
   - tests/HC-001-TST_dynamic_holographic_dark_energy.py
   id: HC-001
   title: Dynamic holographic dark energy
+- categories:
+  - DOC
+  - TST
+  - MOD
+  created: '2025-04-14T19:35:45.004753'
+  files:
+  - doc/papers/tex/HC-002-DOC_entanglement_curvature_1d.tex
+  - tests/HC-002-TST_entanglement_curvature_1d.py
+  - src/modeling/HC-002-MOD_entanglement_curvature_1d.py
+  id: HC-002
+  title: Entanglement curvature 1D
+- categories:
+  - DOC
+  - TST
+  - MOD
+  created: '2025-04-14T19:42:32.612677'
+  files:
+  - doc/papers/tex/HC-003-DOC_entanglement_curvature_3d.tex
+  - tests/HC-003-TST_entanglement_curvature_3d.py
+  - src/modeling/HC-003-MOD_entanglement_curvature_3d.py
+  id: HC-003
+  title: Entanglement curvature 3D
