@@ -20,9 +20,9 @@ Simulates a schematic 3D PEPS network on a 16×16×16 lattice and visualizes loc
 Simulates an effective gravitational field equation derived from quantum entanglement entropy.
 `python HC-005-MOD_effective_field_equation.py`
 
-## gravity_laplacian_simulation.py
+## HC-006-MOD_gravity_laplacian.py
 Computes entanglement entropy and its Laplacian (curvature proxy) from a 3D PEPS model.  
-`python gravity_laplacian_simulation.py --steps 5 --plot`
+`python HC-006-MOD_gravity_laplacian.py --steps 5 --plot`
 
 ## gravity_laplacian_impurity.py
 Same as gravity_laplacian_simulation.py  , but introduces a 3×3×3 impurity region with increased transverse field.

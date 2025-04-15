@@ -66,7 +66,7 @@ This system allows for consistent cross-referencing between related components. 
 
 To initialize a new HC entry, use:
 
-  python init_holocosmo_entry.py "Description of new experiment" --categories MOD NBK OUT DOC
+  `python hc_entry.py "Description of new experiment" --categories MOD NBK OUT DOC`
 
 Optional flags:
 - --dry-run: Preview changes without writing files.
@@ -78,7 +78,7 @@ This will:
 - Generate blank files in their appropriate folders
 - Update the hc_registry.yaml tracking file
 
-For details, refer to INIT_HOLOCOSMO.md.
+For details, refer to `doc/CONTRIBUTING.md`.
 
 ### Migrating Existing Scripts
 
@@ -91,11 +91,11 @@ This incremental migration approach ensures minimal disruption while gradually i
 
 ## How to Engage with This Project
 
-- **Explore the Notebooks**: Go to `/notebooks` for the story — step-by-step walkthroughs of the ideas, models, and analysis.
+- **Explore the Notebooks**: Go to `/notebooks` for the story — step-by-step walkthroughs of the ideas, models, and analysis. (In progress)
 - **Run the Code**: Modular Python scripts in `/src` implement the key computational logic. Scripts accept command-line parameters and produce timestamped outputs to avoid overwriting.
 - **Check the Data**: All outputs are saved to `/data`, organized into `raw`, `interim`, and `processed` stages to ensure data provenance.
 - **Read the Theory**: Dive into derivations and conceptual underpinnings in the `/doc` directory.
-- **Use the Infrastructure** *(Experimental)*: The `/cdk` folder contains an AWS CDK TypeScript project intended for scaling computations in the cloud (documentation coming soon).
+- **Use the Infrastructure** *(Experimental)*: The `/cdk` folder contains an AWS CDK TypeScript project intended for scaling computations in the cloud (Documentation in progress).
 
 ## Scientific Posture
 

@@ -69,13 +69,13 @@ You are welcome to contribute or to wander about.
 
 # HoloCosmo Entry Initialization & Migration Guide
 
-This document outlines the procedure for initializing new HoloCosmo entries using the init_hc_entry.py script and provides guidance on gradually migrating existing files into the new HC-NNN-CAT system.
+This document outlines the procedure for initializing new HoloCosmo entries using the `doc/hc_entry.py `script and provides guidance on gradually migrating existing files into the new HC-NNN-CAT system.
 
 ---
 
-## A. Using init_hc_entry.py
+## A. Using hc_entry.py
 
-The init_hc_entry.py script automates the creation of new entries by:
+The hc_entry.py script automates the creation of new entries by:
 - Assigning the next available identifier in the format HC-###.
 - Updating a central YAML registry (hc_registry.yaml) with details about the new entry.
 - Creating blank template files for specific categories (e.g., Modeling, Notebook, Output, Documentation) in the appropriate project directories.
@@ -84,7 +84,7 @@ The init_hc_entry.py script automates the creation of new entries by:
 
 To run the script with a description and a set of category codes, use:
 
-  python init_hc_entry.py "Descriptive title for your new entry" --categories MOD NBK OUT DOC
+  `python hc_entry.py "Descriptive title for your new entry" --categories MOD NBK OUT DOC`
 
 This command will:
 - Create a new HC entry (e.g., HC-006) if the last entry was HC-005.
@@ -101,7 +101,7 @@ This command will:
 
 To preview changes without writing to disk, add the --dry-run flag:
 
-  python init_hc_entry.py "Test run of halo simulation" --categories MOD NBK OUT DOC --dry-run
+  `python hc_entry.py "Test run of halo simulation" --categories MOD NBK OUT DOC --dry-run`
 
 The script will then print what it intends to do (file creation paths and registry updates) without actually modifying any files.
 
@@ -109,13 +109,13 @@ The script will then print what it intends to do (file creation paths and regist
 
 If you only want to update the registry (without generating new files), use the flag --update-registry-only:
 
-  python init_hc_entry.py "Registry update entry" --categories MOD NBK OUT DOC --update-registry-only
+  `python hc_entry.py "Registry update entry" --categories MOD NBK OUT DOC --update-registry-only`
 
 #### Specifying a Base Folder
 
 If you prefer to nest all generated files in a specific folder (for example, a project-specific folder), use the --folder flag:
 
-  python init_hc_entry.py "New experimental run" --categories MOD NBK OUT DOC --folder projects/HC-XXX
+  `python hc_entry.py "New experimental run" --categories MOD NBK OUT DOC --folder projects/HC-XXX`
 
 This will create the files inside the specified folder rather than in the default directory mapping.
 
@@ -127,9 +127,9 @@ Rather than renaming old files directly, the migration strategy is to create new
 
 ### 1. Create New HC-Tagged Files
 
-For each new HC entry, run the init_hc_entry.py script as explained above. For example:
+For each new HC entry, run the hc_entry.py script as explained above. For example:
 
-  python init_hc_entry.py "Entangled gravity simulation" --categories MOD NBK DOC
+  `python hc_entry.py "Entangled gravity simulation" --categories MOD NBK DOC`
 
 This will generate:
 - A new modeling script (e.g., src/modeling/HC-XYZ-MOD_entangled_gravity_simulation.py)
@@ -154,6 +154,6 @@ Once the new blank files have been created:
 
 All changes and new file creations are logged in the registry file (hc_registry.yaml), which serves as a central reference index linking the HC identifiers to the new files. This way, any new analysis, paper, or script can easily refer to its corresponding HC entry using a command such as:
 
-  find . -name 'HC-XYZ*'
+  `find . -name 'HC-XYZ*'`
 
 This process helps ensure traceability and ease of maintenance as your project evolves.

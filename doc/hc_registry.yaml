@@ -53,3 +53,21 @@
   - ../src/modeling/HC-005-MOD_effective_field_equation.py
   id: HC-005
   title: Effective field equation
+- categories:
+  - TST
+  - MOD
+  created: '2025-04-15T18:26:31.098911'
+  files:
+  - ../tests/HC-006-TST_gravity_laplacian.py
+  - ../src/modeling/HC-006-MOD_gravity_laplacian.py
+  id: HC-006
+  title: Gravity Laplacian
+- categories:
+  - TST
+  - MOD
+  created: '2025-04-15T18:26:37.408531'
+  files:
+  - ../tests/HC-007-TST_gravity_laplacian_impurity.py
+  - ../src/modeling/HC-007-MOD_gravity_laplacian_impurity.py
+  id: HC-007
+  title: Gravity Laplacian impurity
