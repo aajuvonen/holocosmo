@@ -15,8 +15,8 @@ This estimates how sensitive geodesic paths are to small perturbations in starti
 Inputs (via CLI):
 ------------------
 --input FILE.csv       Input from HC-008-ANA. CSV with x, y, z, laplacian.
-                        If not provided, the script will scan for files matching
-                        "../../data/processed/HC-008-ANA_*_cluster_analysis.csv" and prompt the user.
+                       If not provided, the script will scan for files matching
+                       "../../data/processed/HC-008-ANA_*_cluster_analysis.csv" and prompt the user.
 --start x y z          Central path start point (default: 2 2 2)
 --end x y z            End point (default: 29 29 29)
 --smooth-sigma FLOAT   Gaussian smoothing sigma (default: 1.5)

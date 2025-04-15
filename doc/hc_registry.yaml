@@ -107,3 +107,12 @@
   - ../tests/HC-011-TST_curvature_gradient.py
   id: HC-011
   title: Curvature gradient
+- categories:
+  - ANA
+  - TST
+  created: '2025-04-15T19:28:13.493979'
+  files:
+  - ../src/analysis/HC-012-ANA_visualize_laplacian_3d.py
+  - ../tests/HC-012-TST_visualize_laplacian_3d.py
+  id: HC-012
+  title: Visualize Laplacian 3D
