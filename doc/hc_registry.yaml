@@ -125,3 +125,12 @@
   - ../tests/HC-013-TST_sparc_fitting.py
   id: HC-013
   title: Sparc fitting
+- categories:
+  - ANA
+  - TST
+  created: '2025-04-15T19:58:03.818034'
+  files:
+  - ../src/analysis/HC-014-ANA_radial_profile.py
+  - ../tests/HC-014-TST_radial_profile.py
+  id: HC-014
+  title: Radial profile
