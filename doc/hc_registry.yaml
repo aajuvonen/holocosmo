@@ -89,3 +89,12 @@
   - ../tests/HC-009-TST_curvature_deviation.py
   id: HC-009
   title: Curvature deviation
+- categories:
+  - ANA
+  - TST
+  created: '2025-04-15T19:07:16.081302'
+  files:
+  - ../src/analysis/HC-010-ANA_curvature_geodesic.py
+  - ../tests/HC-010-TST_curvature_geodesic.py
+  id: HC-010
+  title: Curvature geodesic
