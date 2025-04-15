@@ -4,3 +4,4 @@
 - edit scripts: save figures instead of only displaying them
 - edit tests: run tests without displaying the figures
 - edit tests: save temporary data to data/interim/
+- edit tests: ensure that all tests are headless and silent

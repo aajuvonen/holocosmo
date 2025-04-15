@@ -134,3 +134,12 @@
   - ../tests/HC-014-TST_radial_profile.py
   id: HC-014
   title: Radial profile
+- categories:
+  - ANA
+  - TST
+  created: '2025-04-15T20:12:40.665329'
+  files:
+  - ../src/analysis/HC-015-ANA_potential_fitting.py
+  - ../tests/HC-015-TST_potential_fitting.py
+  id: HC-015
+  title: Potential fitting
