@@ -16,20 +16,12 @@ Fits parameters [kappa, r0, alpha] using nonlinear least squares.
 
 Inputs:
 --------
-- .dat files under data/sparc/ (SPARC format with 8-column layout)
+- .dat files under data/raw/sparc/ (SPARC format with 8-column layout, user prompt)
 
 Outputs:
 ---------
 - CSV with fit results and residuals
 - Residual + velocity curve plot
-
-Usage:
--------
-    python sparc_fitting.py
-
-Note:
-------
-This version scans data/raw/sparc/ for input files (instead of current working dir).
 """
 
 import os

@@ -17,12 +17,12 @@ Visualizes the gradient of curvature (∇Laplacian) on a fixed z-slice from PEPS
 `python HC-011-ANA_curvature_gradient.py --input peps_results.csv --slice-z 16`
 
 ## HC-012-ANA_visualize_laplacian_3d.py  
-Generates a 3D scatter plot of Laplacian (entanglement curvature) values from a PEPS simulation cluster analysis.  
+Generates a 3D scatter plot of Laplacian (entanglement curvature) values from a PEPS simulation cluster analysis of HC-008-ANA.
 `python HC-012-ANA_visualize_laplacian_3d.py --input cluster_analysis.csv --threshold 0.025 --sample 3000 --show`
 
-## sparc_fitting.py  
+## HC-013-ANA_sparc_fitting.py  
 Fits SPARC-format galaxy rotation curves using an entropic gravity model.  
-`python sparc_fitting.py`
+`python HC-013-ANA_sparc_fitting.py`
 
 ## radial_profile.py  
 Computes radial averages of the curvature (Laplacian) field from a 3D entanglement lattice.  

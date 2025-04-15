@@ -116,3 +116,12 @@
   - ../tests/HC-012-TST_visualize_laplacian_3d.py
   id: HC-012
   title: Visualize Laplacian 3D
+- categories:
+  - ANA
+  - TST
+  created: '2025-04-15T19:38:24.505819'
+  files:
+  - ../src/analysis/HC-013-ANA_sparc_fitting.py
+  - ../tests/HC-013-TST_sparc_fitting.py
+  id: HC-013
+  title: Sparc fitting
