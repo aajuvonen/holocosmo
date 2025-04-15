@@ -71,3 +71,21 @@
   - ../src/modeling/HC-007-MOD_gravity_laplacian_impurity.py
   id: HC-007
   title: Gravity Laplacian impurity
+- categories:
+  - ANA
+  - TST
+  created: '2025-04-15T18:39:35.885562'
+  files:
+  - ../src/analysis/HC-008-ANA_cluster_analysis.py
+  - ../tests/HC-008-TST_cluster_analysis.py
+  id: HC-008
+  title: Cluster analysis
+- categories:
+  - ANA
+  - TST
+  created: '2025-04-15T18:52:22.774914'
+  files:
+  - ../src/analysis/HC-009-ANA_curvature_deviation.py
+  - ../tests/HC-009-TST_curvature_deviation.py
+  id: HC-009
+  title: Curvature deviation
