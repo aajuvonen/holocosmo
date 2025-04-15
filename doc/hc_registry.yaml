@@ -98,3 +98,12 @@
   - ../tests/HC-010-TST_curvature_geodesic.py
   id: HC-010
   title: Curvature geodesic
+- categories:
+  - ANA
+  - TST
+  created: '2025-04-15T19:14:28.877452'
+  files:
+  - ../src/analysis/HC-011-ANA_curvature_gradient.py
+  - ../tests/HC-011-TST_curvature_gradient.py
+  id: HC-011
+  title: Curvature gradient

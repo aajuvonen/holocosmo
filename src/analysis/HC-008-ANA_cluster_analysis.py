@@ -13,7 +13,7 @@ It performs:
 
 Inputs (via CLI):
 ------------------
---input FILE.csv        Path to input CSV. Input from HC-006-MOD or HC-007-MOD (x, y, z, laplacian).
+--input FILE.csv        Path to input CSV. Input from HC-006-MOD or HC-007-MOD (x, y, z, entropy, laplacian).
                         If not provided, the script will scan for matching files in
                         "../../data/interim/HC-006-MOD*" and "../../data/interim/HC-007-MOD*"
 --output-dir PATH       Directory for output files (default: ../../data/processed/)
