@@ -29,7 +29,8 @@ Outputs:
 
 Paper References:
 ------------------
-This simulation is grounded in the theoretical framework proposed in:
+This simulation is builds on HC-004-MOD and HC-005-MOD.
+It's grounded in the theoretical framework proposed in:
 - HC-004-DOC: Entanglement Curvature: A Tensorial Approach to Emergent Geometry
 - HC-005-DOC: An Effective Field Equation for Emergent Gravity from Quantum Entanglement
 

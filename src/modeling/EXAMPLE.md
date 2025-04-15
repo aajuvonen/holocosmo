@@ -24,6 +24,6 @@ Simulates an effective gravitational field equation derived from quantum entangl
 Computes entanglement entropy and its Laplacian (curvature proxy) from a 3D PEPS model.  
 `python HC-006-MOD_gravity_laplacian.py --steps 5 --plot`
 
-## gravity_laplacian_impurity.py
-Same as gravity_laplacian_simulation.py  , but introduces a 3×3×3 impurity region with increased transverse field.
-`python gravity_laplacian_impurity.py --h-impurity 4.0 --plot`
+## HC-007-MOD_gravity_laplacian_impurity.py
+Same as HC-006-MOD_gravity_laplacian.py, but introduces a 3×3×3 impurity region with increased transverse field.
+`python HC-007-MOD_gravity_laplacian_impurity.py --h-impurity 4.0 --plot`
